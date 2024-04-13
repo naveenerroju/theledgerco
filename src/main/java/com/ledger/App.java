@@ -1,6 +1,8 @@
 package com.ledger;
 
+import com.ledger.service.LedgerEntry;
 import com.ledger.service.ReadFileImpl;
+import com.ledger.service.ServiceFactory;
 import com.ledger.utils.Utility;
 
 public class App {
@@ -10,6 +12,14 @@ public class App {
         ReadFileImpl readFile = new ReadFileImpl();
         String fileContent = readFile.readFile(FILE_LOCATION);
         Utility.logInfo(fileContent);
+
+        ServiceFactory factory = new ServiceFactory();
+        LedgerEntry service = factory.getService(null);
+
+        service.perform(null);
+
     }
+
+
 
 }
