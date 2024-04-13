@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c049d29-3e17-4aab-b266-452afca6158d" name="Changes" comment="" />
+    <list default="true" id="9c049d29-3e17-4aab-b266-452afca6158d" name="Changes" comment="DTOs and File Reader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/dto/Balance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/dto/Inputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/dto/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/dto/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/service/ReadFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/service/ReadFileImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/utils/Utility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ledger_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ledger_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/App.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,9 +51,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ledger.App" />
+      <module name="ledger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ledger.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,5 +85,9 @@
       <updated>1713022018201</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DTOs and File Reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="DTOs and File Reader" />
   </component>
 </project>
