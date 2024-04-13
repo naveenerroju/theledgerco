@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c049d29-3e17-4aab-b266-452afca6158d" name="Changes" comment="factory design pattern is implemented">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/utils/CommandsUtility.java" afterDir="false" />
+    <list default="true" id="9c049d29-3e17-4aab-b266-452afca6158d" name="Changes" comment="extraction of commands and pass to service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/dto/LoanRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/repository/LoanRecordImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ledger/repository/LoanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ledger/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ledger/service/LoanServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ledger/utils/CommandsUtilityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/service/BalanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/service/BalanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/service/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/service/LoanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ledger/utils/CommandsUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ledger/utils/CommandsUtility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +28,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
@@ -44,9 +55,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true"
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ledger.utils" />
+      <recent name="com.ledger.service" />
+      <recent name="com.ledger" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ledger.App" />
@@ -90,23 +114,20 @@
       <option name="project" value="LOCAL" />
       <updated>1713028144536</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="extraction of commands and pass to service">
+      <created>1713030231627</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713030231627</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DTOs and File Reader" />
     <MESSAGE value="factory design pattern is implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="factory design pattern is implemented" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ledger/App.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="extraction of commands and pass to service" />
+    <option name="LAST_COMMIT_MESSAGE" value="extraction of commands and pass to service" />
   </component>
 </project>

@@ -4,10 +4,15 @@ import com.ledger.service.LedgerEntry;
 import com.ledger.service.ReadFileImpl;
 import com.ledger.service.ServiceFactory;
 import com.ledger.utils.CommandsUtility;
-import com.ledger.utils.Utility;
 
 import java.util.List;
 
+/**
+ * @author Naveen Kumar
+ * @author naveenkumarerroju@gmail.com
+ * <p>The Ledger Co., a marketplace for banks to lend money to borrowers and receive payments for the loans.</p>
+ * <p>This is an exercise in GeekTrust. {@link <a href="https://www.geektrust.com/coding/detailed/the-ledger-co">The Ledger Co</a>"}.</p>
+ */
 public class App {
     private static final String FILE_LOCATION = "src/main/resources/ledger_1.txt";
 
@@ -15,7 +20,6 @@ public class App {
         //Reading file
         ReadFileImpl readFile = new ReadFileImpl();
         String fileContent = readFile.readFile(FILE_LOCATION);
-        Utility.logInfo(fileContent);
 
         //Extracting commands from the file content
         List<String> commands = CommandsUtility.getCommands(fileContent);
