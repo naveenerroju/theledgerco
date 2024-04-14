@@ -35,7 +35,8 @@ public class Utility {
      * @param message message to be printed
      */
     public static void logInfo(String message) {
-        logger.log(Level.INFO, message);
+        //logger.log(Level.INFO, message);
+        System.out.println(message);
     }
 
     /**
@@ -46,11 +47,14 @@ public class Utility {
      * @param loan Loan with required fields for calculation
      * @return P*N*R
      */
-    public static int calculateTotalInterest(Loan loan){
+    public static long calculateTotalInterest(Loan loan){
         long principalAmount = loan.getPrincipalAmount();
-        int rateOfInterest = loan.getRateOfInterest();
+        double rateOfInterest = (double) loan.getRateOfInterest() / 100; // Convert percentage to decimal
         int numberOfYears = loan.getNoOfYears();
-        return (int) principalAmount * rateOfInterest * numberOfYears;
+
+        double totalInterest = principalAmount * rateOfInterest * numberOfYears;
+
+        return Math.round(principalAmount + totalInterest);
     }
 
     /**
@@ -90,11 +94,12 @@ public class Utility {
         return (int) (totalAmountLeft/loanRecord.getEmi());
     }
 
-    public static int caclulateEmi(LoanRecord loanRecord){
+    public static double calculateEmi(LoanRecord loanRecord){
         long principal = loanRecord.getPrinciple();
-        int interestRate = loanRecord.getInterest();
-        int tenure = loanRecord.getTenure();
-        return (int) ((principal * interestRate) / (1 - Math.pow((double)1 + interestRate, -tenure)));
+        double interestRate = (double) loanRecord.getInterest() / 1200; // Convert annual interest rate to monthly rate
+        int tenure = loanRecord.getTenure()*12;
+
+        return ((principal * interestRate * Math.pow(1 + interestRate, tenure)) / (Math.pow(1 + interestRate, tenure) - 1));
     }
 
     public static String listToString(List<LoanRecord> loanRecordList){

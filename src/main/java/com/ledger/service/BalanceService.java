@@ -29,12 +29,16 @@ public class BalanceService implements LedgerEntry{
         Balance balance = generateBalanceModel(command);
         LoanRecord loanRecord = repository.getLoanRecordByBorrowerName(balance.getBorrowerName());
         ServiceHelper.validateRecordRequest(loanRecord, balance.getBorrowerName());
+        loanRecord.setEmiNumber(balance.getEmiNumber());
+
         long totalAmountPaid = Utility.calculateTheAmountPaid(loanRecord);
         long totalEmiLeft = Utility.calculateTotalNumberOfEmiLeft(loanRecord);
 
+        loanRecord.setTotalPayOffAmount(totalAmountPaid);
+        loanRecord.setBalance(loanRecord.getPrinciple() - totalAmountPaid);
+
         String response = buildResponse(loanRecord, totalAmountPaid, totalEmiLeft);
         Utility.logInfo(response);
-
     }
 
     private Balance generateBalanceModel(String command){
