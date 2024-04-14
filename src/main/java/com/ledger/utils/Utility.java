@@ -3,6 +3,7 @@ package com.ledger.utils;
 import com.ledger.dto.Loan;
 import com.ledger.dto.LoanRecord;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -94,6 +95,19 @@ public class Utility {
         int interestRate = loanRecord.getInterest();
         int tenure = loanRecord.getTenure();
         return (int) ((principal * interestRate) / (1 - Math.pow((double)1 + interestRate, -tenure)));
+    }
+
+    public static String listToString(List<LoanRecord> loanRecordList){
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < loanRecordList.size(); i++) {
+            sb.append(loanRecordList.get(i));
+            if (i < loanRecordList.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
 
 }

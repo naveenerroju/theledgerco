@@ -24,4 +24,10 @@ public class LoanRepositoryImpl implements LoanRepository{
         loanRecords.add(loanRecord);
         return loanRecord;
     }
+
+    public List<LoanRecord> getAll(){
+        return this.loanRecords;
+    }
+
+
 }

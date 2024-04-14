@@ -5,6 +5,7 @@ import com.ledger.service.LedgerEntry;
 import com.ledger.service.ReadFileImpl;
 import com.ledger.service.ServiceFactory;
 import com.ledger.utils.CommandsUtility;
+import com.ledger.utils.Utility;
 
 import java.util.List;
 
@@ -35,8 +36,12 @@ public class App {
 
             //Perform the operation
             service.perform(command);
+
         }
 
+        //debugging
+        Utility.logInfo("----------------------------------------");
+        Utility.logInfo(Utility.listToString(loanRepository.getAll()));
     }
 
 }
