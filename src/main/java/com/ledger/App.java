@@ -39,9 +39,6 @@ public class App {
 
         }
 
-        //debugging
-        Utility.logInfo("----------------------------------------");
-        Utility.logInfo(Utility.listToString(loanRepository.getAll()));
     }
 
 }

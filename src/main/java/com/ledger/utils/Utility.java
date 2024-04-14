@@ -47,7 +47,7 @@ public class Utility {
      * @param loan Loan with required fields for calculation
      * @return P*N*R
      */
-    public static long calculateTotalInterest(Loan loan){
+    public static long calculateTotalPayOff(Loan loan){
         long principalAmount = loan.getPrincipalAmount();
         double rateOfInterest = (double) loan.getRateOfInterest() / 100; // Convert percentage to decimal
         int numberOfYears = loan.getNoOfYears();
@@ -69,7 +69,7 @@ public class Utility {
         long totalLumpSumPaid = loanRecord.getTotalLumpSumPaid();
         double totalEmiPaid = (loanRecord.getEmiNumber() * loanRecord.getEmi());
 
-        return Math.ceil(totalEmiPaid+totalLumpSumPaid);
+        return totalEmiPaid+totalLumpSumPaid;
     }
 
     /**
