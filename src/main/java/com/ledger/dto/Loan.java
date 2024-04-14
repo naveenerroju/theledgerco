@@ -5,7 +5,18 @@ public class Loan {
     private String borrowerName;
     private long principalAmount;
     private int noOfYears;
-    private float rateOfInterest;
+    private int rateOfInterest;
+
+    public Loan(String bankName, String borrowerName, long principalAmount, int noOfYears, int rateOfInterest) {
+        this.bankName = bankName;
+        this.borrowerName = borrowerName;
+        this.principalAmount = principalAmount;
+        this.noOfYears = noOfYears;
+        this.rateOfInterest = rateOfInterest;
+    }
+
+    public Loan() {
+    }
 
     public String getBankName() {
         return bankName;
@@ -39,19 +50,11 @@ public class Loan {
         this.noOfYears = noOfYears;
     }
 
-    public float getRateOfInterest() {
+    public int getRateOfInterest() {
         return rateOfInterest;
     }
 
-    public void setRateOfInterest(float rateOfInterest) {
-        this.rateOfInterest = rateOfInterest;
-    }
-
-    public Loan(String bankName, String borrowerName, long principalAmount, int noOfYears, float rateOfInterest) {
-        this.bankName = bankName;
-        this.borrowerName = borrowerName;
-        this.principalAmount = principalAmount;
-        this.noOfYears = noOfYears;
+    public void setRateOfInterest(int rateOfInterest) {
         this.rateOfInterest = rateOfInterest;
     }
 

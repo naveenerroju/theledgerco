@@ -3,7 +3,7 @@ package com.ledger.dto;
 public class Balance {
     private String bankName;
     private String borrowerName;
-    private String emiNumber;
+    private int emiNumber;
 
     public String getBankName() {
         return bankName;
@@ -21,15 +21,15 @@ public class Balance {
         this.borrowerName = borrowerName;
     }
 
-    public String getEmiNumber() {
+    public int getEmiNumber() {
         return emiNumber;
     }
 
-    public void setEmiNumber(String emiNumber) {
+    public void setEmiNumber(int emiNumber) {
         this.emiNumber = emiNumber;
     }
 
-    public Balance(String bankName, String borrowerName, String emiNumber) {
+    public Balance(String bankName, String borrowerName, int emiNumber) {
         this.bankName = bankName;
         this.borrowerName = borrowerName;
         this.emiNumber = emiNumber;

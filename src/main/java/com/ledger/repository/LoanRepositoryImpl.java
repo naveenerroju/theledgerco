@@ -5,7 +5,7 @@ import com.ledger.dto.LoanRecord;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoanRecordImpl implements LoanRepository{
+public class LoanRepositoryImpl implements LoanRepository{
 
     private final List<LoanRecord> loanRecords = new ArrayList<>();
 

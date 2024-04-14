@@ -1,5 +1,6 @@
 package com.ledger;
 
+import com.ledger.repository.LoanRepositoryImpl;
 import com.ledger.service.LedgerEntry;
 import com.ledger.service.ReadFileImpl;
 import com.ledger.service.ServiceFactory;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 public class App {
     private static final String FILE_LOCATION = "src/main/resources/ledger_1.txt";
+    private static final LoanRepositoryImpl loanRepository = new LoanRepositoryImpl();
 
     public static void main(String[] args) {
         //Reading file
@@ -29,7 +31,7 @@ public class App {
 
             //Get the appropriate service using service factory
             ServiceFactory factory = new ServiceFactory();
-            LedgerEntry service = factory.getService(operations.get(0));
+            LedgerEntry service = factory.getService(loanRepository, operations.get(0));
 
             //Perform the operation
             service.perform(command);

@@ -4,10 +4,41 @@ public class LoanRecord {
     private String bankName;
     private String borrowerName;
     private long principle;
+    private long totalLumpSumPaid;
+    private long totalPayOffAmount;
     private int interest;
     private int tenure;
     private long balance;
+    private int emiNumber;
     private int emi;
+
+    public LoanRecord() {
+        // initialise a record
+    }
+
+    public long getTotalLumpSumPaid() {
+        return totalLumpSumPaid;
+    }
+
+    public void setTotalLumpSumPaid(long totalLumpSumPaid) {
+        this.totalLumpSumPaid = totalLumpSumPaid;
+    }
+
+    public int getEmi() {
+        return emi;
+    }
+
+    public long getTotalPayOffAmount() {
+        return totalPayOffAmount;
+    }
+
+    public void setTotalPayOffAmount(long totalPayOffAmount) {
+        this.totalPayOffAmount = totalPayOffAmount;
+    }
+
+    public void setEmi(int emi) {
+        this.emi = emi;
+    }
 
     public String getBankName() {
         return bankName;
@@ -57,22 +88,12 @@ public class LoanRecord {
         this.balance = balance;
     }
 
-    public int getEmi() {
-        return emi;
+    public int getEmiNumber() {
+        return emiNumber;
     }
 
-    public void setEmi(int emi) {
-        this.emi = emi;
-    }
-
-    public LoanRecord(String bankName, String borrowerName, long principle, int interest, int tenure, long balance, int emi) {
-        this.bankName = bankName;
-        this.borrowerName = borrowerName;
-        this.principle = principle;
-        this.interest = interest;
-        this.tenure = tenure;
-        this.balance = balance;
-        this.emi = emi;
+    public void setEmiNumber(int emiNumber) {
+        this.emiNumber = emiNumber;
     }
 
     @Override
@@ -84,7 +105,7 @@ public class LoanRecord {
                 ", interest=" + interest +
                 ", tenure=" + tenure +
                 ", balance=" + balance +
-                ", emi=" + emi +
+                ", emi=" + emiNumber +
                 '}';
     }
 }

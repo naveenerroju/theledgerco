@@ -4,7 +4,7 @@ public class Payment {
     private String bankName;
     private String borrowerName;
     private long lumpSumAmount;
-    private String emiNumber;
+    private int emiNumber;
 
     public String getBankName() {
         return bankName;
@@ -30,15 +30,15 @@ public class Payment {
         this.lumpSumAmount = lumpSumAmount;
     }
 
-    public String getEmiNumber() {
+    public int getEmiNumber() {
         return emiNumber;
     }
 
-    public void setEmiNumber(String emiNumber) {
+    public void setEmiNumber(int emiNumber) {
         this.emiNumber = emiNumber;
     }
 
-    public Payment(String bankName, String borrowerName, long lumpSumAmount, String emiNumber) {
+    public Payment(String bankName, String borrowerName, long lumpSumAmount, int emiNumber) {
         this.bankName = bankName;
         this.borrowerName = borrowerName;
         this.lumpSumAmount = lumpSumAmount;
