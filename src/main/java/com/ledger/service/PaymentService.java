@@ -27,7 +27,7 @@ public class PaymentService implements LedgerEntry {
         LoanRecord loanRecord = repository.getLoanRecordByBorrowerName(payment.getBorrowerName());
         ServiceHelper.validateRecordRequest(loanRecord, payment.getBorrowerName());
         loanRecord.setEmiNumber(payment.getEmiNumber());
-        long totalAmountPaid = Utility.calculateTheAmountPaid(loanRecord);
+        double totalAmountPaid = Utility.calculateTheAmountPaid(loanRecord);
         loanRecord.setTotalLumpSumPaid(payment.getLumpSumAmount() + loanRecord.getTotalLumpSumPaid());
         loanRecord.setBalance(loanRecord.getPrinciple() - totalAmountPaid);
     }

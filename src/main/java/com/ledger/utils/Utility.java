@@ -65,11 +65,11 @@ public class Utility {
      * @param loanRecord LoanRecord with totalLumpSum, emiNumber and emi
      * @return totalEmiPaid+totalLumpSumPaid
      */
-    public static long calculateTheAmountPaid(LoanRecord loanRecord){
+    public static double calculateTheAmountPaid(LoanRecord loanRecord){
         long totalLumpSumPaid = loanRecord.getTotalLumpSumPaid();
-        long totalEmiPaid = (long) loanRecord.getEmiNumber() * loanRecord.getEmi();
+        double totalEmiPaid = (loanRecord.getEmiNumber() * loanRecord.getEmi());
 
-        return totalEmiPaid+totalLumpSumPaid;
+        return Math.ceil(totalEmiPaid+totalLumpSumPaid);
     }
 
     /**
@@ -78,7 +78,7 @@ public class Utility {
      * @param loanRecord LoanRecord containing emi, emiNumber and lumpSumAmountPaid
      * @return totalEmiPaid+totalLumpSumPaid;
      */
-    public static long calculateTheAmountLeft(LoanRecord loanRecord){
+    public static double calculateTheAmountLeft(LoanRecord loanRecord){
         return loanRecord.getTotalPayOffAmount()-Utility.calculateTheAmountPaid(loanRecord);
     }
 
@@ -89,9 +89,9 @@ public class Utility {
      * @param loanRecord LoanRecord with emi field
      * @return (int) (totalAmountLeft/loanRecord.getEmi())
      */
-    public static int calculateTotalNumberOfEmiLeft(LoanRecord loanRecord){
-        long totalAmountLeft = Utility.calculateTheAmountLeft(loanRecord);
-        return (int) (totalAmountLeft/loanRecord.getEmi());
+    public static double calculateTotalNumberOfEmiLeft(LoanRecord loanRecord){
+        double totalAmountLeft = Utility.calculateTheAmountLeft(loanRecord);
+        return (totalAmountLeft/loanRecord.getEmi());
     }
 
     public static double calculateEmi(LoanRecord loanRecord){

@@ -31,13 +31,13 @@ public class BalanceService implements LedgerEntry{
         ServiceHelper.validateRecordRequest(loanRecord, balance.getBorrowerName());
         loanRecord.setEmiNumber(balance.getEmiNumber());
 
-        long totalAmountPaid = Utility.calculateTheAmountPaid(loanRecord);
-        long totalEmiLeft = Utility.calculateTotalNumberOfEmiLeft(loanRecord);
+        double totalAmountPaid = Utility.calculateTheAmountPaid(loanRecord);
+        double totalEmiLeft = Utility.calculateTotalNumberOfEmiLeft(loanRecord);
 
         loanRecord.setTotalPayOffAmount(totalAmountPaid);
         loanRecord.setBalance(loanRecord.getPrinciple() - totalAmountPaid);
 
-        String response = buildResponse(loanRecord, totalAmountPaid, totalEmiLeft);
+        String response = buildResponse(loanRecord, (int)Math.ceil(totalAmountPaid), (int)Math.ceil(totalEmiLeft));
         Utility.logInfo(response);
     }
 

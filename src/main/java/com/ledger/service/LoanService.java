@@ -31,7 +31,7 @@ public class LoanService implements LedgerEntry {
         LoanRecord loanRecord = mapper.loanModelToRecord(loanModel);
         loanRecord.setTotalPayOffAmount(Utility.calculateTotalInterest(loanModel));
         double emi = Utility.calculateEmi(loanRecord);
-        loanRecord.setEmi((int) Math.ceil(emi));
+        loanRecord.setEmi(emi);
         repository.save(loanRecord);
 
     }
