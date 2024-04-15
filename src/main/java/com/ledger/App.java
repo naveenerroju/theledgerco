@@ -16,7 +16,7 @@ import java.util.List;
  * <p>This is an exercise in GeekTrust. {@link <a href="https://www.geektrust.com/coding/detailed/the-ledger-co">The Ledger Co</a>"}.</p>
  */
 public class App {
-    private static final String FILE_LOCATION = "src/main/resources/ledger_1.txt";
+    private static final String FILE_LOCATION = "src/main/resources/ledger_2.txt";
     private static final LoanRepositoryImpl loanRepository = new LoanRepositoryImpl();
 
     public static void main(String[] args) {
