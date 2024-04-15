@@ -1,5 +1,6 @@
 package com.ledger.service;
 
+import com.ledger.dto.Inputs;
 import com.ledger.dto.Loan;
 import com.ledger.dto.LoanRecord;
 import com.ledger.exception.BusinessException;
@@ -39,7 +40,7 @@ public class LoanService implements LedgerEntry {
     private Loan generateLoanModel(String command) {
         String[] parts = command.split(" ");
 
-        if (parts.length != 6 || !parts[0].equalsIgnoreCase("LOAN")) {
+        if (parts.length != 6 || !parts[0].equalsIgnoreCase(Inputs.LOAN.toString())) {
             throw new BusinessException("Invalid loan string format");
         }
 

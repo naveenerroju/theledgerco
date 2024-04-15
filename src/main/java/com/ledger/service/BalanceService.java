@@ -1,6 +1,7 @@
 package com.ledger.service;
 
 import com.ledger.dto.Balance;
+import com.ledger.dto.Inputs;
 import com.ledger.dto.LoanRecord;
 import com.ledger.exception.BusinessException;
 import com.ledger.repository.LoanRepositoryImpl;
@@ -43,7 +44,7 @@ public class BalanceService implements LedgerEntry{
     private Balance generateBalanceModel(String command){
         String[] parts = command.split(" ");
 
-        if (parts.length != 4 || !parts[0].equalsIgnoreCase("BALANCE")) {
+        if (parts.length != 4 || !parts[0].equalsIgnoreCase(Inputs.BALANCE.toString())) {
             throw new BusinessException("Invalid loan string format");
         }
 
